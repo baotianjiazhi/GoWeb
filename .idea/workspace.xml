@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5dc612a-a1c8-4f4b-9562-65f82dc5f6a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dao/redis/keys.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/vote.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app.ini" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serializer/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/serializer/common.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/post.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/settings.go" beforeDir="false" afterPath="$PROJECT_DIR$/settings/settings.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/air_errors.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/main.exe" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/main.exe" afterDir="false" />
-    </list>
+    <list default="true" id="a5dc612a-a1c8-4f4b-9562-65f82dc5f6a6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +62,7 @@
         <counts>
           <entry key="Makefile" value="2" />
           <entry key="conf" value="2" />
+          <entry key="gitignore" value="1" />
           <entry key="go" value="195" />
           <entry key="ini" value="10" />
           <entry key="posts" value="4" />
@@ -87,7 +75,7 @@
           <entry key="Go" value="195" />
           <entry key="Ini" value="10" />
           <entry key="Makefile" value="1" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="PLAIN_TEXT" value="4" />
           <entry key="SQL" value="3" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -96,6 +84,7 @@
         <counts>
           <entry key="Makefile" value="26" />
           <entry key="conf" value="6" />
+          <entry key="gitignore" value="1" />
           <entry key="go" value="11293" />
           <entry key="ini" value="27" />
           <entry key="sql" value="1439" />
@@ -105,7 +94,7 @@
         <counts>
           <entry key="Go" value="11293" />
           <entry key="Ini" value="27" />
-          <entry key="PLAIN_TEXT" value="32" />
+          <entry key="PLAIN_TEXT" value="33" />
           <entry key="SQL" value="1439" />
         </counts>
       </usages-collector>
@@ -113,14 +102,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dao/redis/vote.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="66" column="76" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="76" />
+            <state relative-caret-position="268">
+              <caret line="67" column="48" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
               <folding>
                 <element signature="e#15#95#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -255,6 +253,7 @@
         <option value="$PROJECT_DIR$/dao/redis/post.go" />
         <option value="$PROJECT_DIR$/service/vote.go" />
         <option value="$PROJECT_DIR$/dao/redis/vote.go" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -264,7 +263,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1240" />
@@ -487,13 +486,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://G:/goprojects/src/awesomeProject/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="236" column="22" selection-start-line="236" selection-start-column="22" selection-end-line="236" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pkg/jwt/jwt.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -830,11 +822,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dao/redis/vote.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="66" column="76" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="76" />
+        <state relative-caret-position="268">
+          <caret line="67" column="48" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
           <folding>
             <element signature="e#15#95#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
