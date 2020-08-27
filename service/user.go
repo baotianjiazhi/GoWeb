@@ -58,4 +58,3 @@ func (servicer *SignInService) Login() (user *model.User, err error) {
 	user.Token = token
 	return
 }
-

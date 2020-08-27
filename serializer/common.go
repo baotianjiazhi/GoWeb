@@ -6,8 +6,8 @@ import (
 )
 
 type Response struct {
-	Data interface{} `json:"data"`
-	Err interface{} `json:"err"`
+	Data interface{} `json:"data,omitempty"`
+	Err interface{} `json:"err,omitempty"`
 	Status Rescode `json:"status"`
 	Msg interface{} `json:"msg"`
 }

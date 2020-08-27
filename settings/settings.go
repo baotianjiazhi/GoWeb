@@ -1,6 +1,7 @@
 package settings
 
 import (
+	"fmt"
 	"go.uber.org/zap"
 	"log"
 
@@ -65,6 +66,7 @@ func Setup(filename string) {
 	mapTo("app", AppSetting)
 	mapTo("log", LogSetting)
 	mapTo("redis", RedisSetting)
+	fmt.Println(RedisSetting)
 	mapTo("snowflake", SnowFlakeSetting)
 }
 
