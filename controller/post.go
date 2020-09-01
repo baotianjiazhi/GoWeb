@@ -10,6 +10,8 @@ import (
 	"strconv"
 )
 
+
+
 // CreatePostHandler 创建帖子
 func CreatePostHandler(c *gin.Context) {
 	p := new(model.Post)
@@ -61,8 +63,40 @@ func GetPostHandler(c *gin.Context) {
 
 // GetPostList 获取帖子列表函数
 func GetPostListHandler(c *gin.Context) {
+	// 获取分页参数
 	page, size := GetPageInfo(c)
+	// 获取数据
 	data, err := service.GetPostList(page, size)
+	if err != nil {
+		zap.L().Error("service.GetPostListHandler() err", zap.Error(err))
+		serializer.ResponseError(c, serializer.CodeServerBusy)
+		return
+	}
+
+	// 返回响应
+	serializer.ResponseSuccess(c, data)
+}
+
+// GetPostListHandler2 升级版帖子列表函数
+// 根据前端传来的参数（按分数或按创建时间排序）动态的获取帖子列表
+// 1.获取参数
+// 2.去redis查询id列表
+// 3.根据id去数据库查询帖子详细信息
+func GetPostListHandler2(c *gin.Context) {
+	var servicer service.PostListService
+	servicer = service.PostListService{
+		Page: 1,
+		Size: 10,
+		Order: model.OrderTime,
+	}
+	// GET请求参数:/api/v1/posts2?page=1&size=10&order=time
+	if err := c.ShouldBindQuery(&servicer); err != nil {
+		zap.L().Error("c.ShouldBindQuery(&servicer) err", zap.Error(err))
+		serializer.ResponseError(c, serializer.CodeInvalidParam)
+		return
+	}
+
+	data, err := service.GetPostList2(&servicer)
 	if err != nil {
 		zap.L().Error("service.GetPostListHandler() err", zap.Error(err))
 		serializer.ResponseError(c, serializer.CodeServerBusy)
