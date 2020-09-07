@@ -11,7 +11,6 @@ import (
 )
 
 
-
 // CreatePostHandler 创建帖子
 func CreatePostHandler(c *gin.Context) {
 	p := new(model.Post)
@@ -95,8 +94,7 @@ func GetPostListHandler2(c *gin.Context) {
 		serializer.ResponseError(c, serializer.CodeInvalidParam)
 		return
 	}
-
-	data, err := service.GetPostList2(&servicer)
+	data, err := service.GetPostListNew(&servicer) // 更新：合二为一
 	if err != nil {
 		zap.L().Error("service.GetPostListHandler() err", zap.Error(err))
 		serializer.ResponseError(c, serializer.CodeServerBusy)
@@ -106,3 +104,31 @@ func GetPostListHandler2(c *gin.Context) {
 	// 返回响应
 	serializer.ResponseSuccess(c, data)
 }
+
+// 根据社区去查询帖子列表
+//func GetCommunityPostListHandler(c *gin.Context) {
+//	var servicer service.ParamCommunityPostListService
+//	servicer = service.ParamCommunityPostListService{
+//		PostListService: &service.PostListService{
+//			Page: 1,
+//			Size: 10,
+//			Order: model.OrderTime,
+//		},
+//	}
+//	// GET请求参数:/api/v1/posts2?page=1&size=10&order=time
+//	if err := c.ShouldBindQuery(&servicer); err != nil {
+//		zap.L().Error("c.ShouldBindQuery(&servicer) err", zap.Error(err))
+//		serializer.ResponseError(c, serializer.CodeInvalidParam)
+//		return
+//	}
+//
+//	data, err := service.GetCommunityPostList2(&servicer)
+//	if err != nil {
+//		zap.L().Error("service.GetPostListHandler() err", zap.Error(err))
+//		serializer.ResponseError(c, serializer.CodeServerBusy)
+//		return
+//	}
+//
+//	// 返回响应
+//	serializer.ResponseSuccess(c, data)
+//}
